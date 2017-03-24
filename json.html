@@ -26,7 +26,7 @@
 }
 
 </style>
-<svg width="2500" height="2500"></svg>
+<svg width="12500" height="12500"></svg>
 <script src="./d3.v4.min.js"></script>
 <script>
 
@@ -36,7 +36,7 @@ var svg = d3.select("svg"),
     g = svg.append("g").attr("transform", "translate(" + (width / 2 + 40) + "," + (height / 2 + 90) + ")");
 
 var tree = d3.tree()
-    .size([500, 800])
+    .size([600, 900])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
 d3.json("./2017-03-23-videos.json", function(treeData) {
