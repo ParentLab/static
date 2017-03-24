@@ -39,7 +39,7 @@ var tree = d3.tree()
     .size([1500, 1800])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-d3.json("./2017-03-23-videos.json", function(treeData) {
+d3.json("./videos.json", function(treeData) {
   var root = d3.hierarchy(treeData);
   tree(root);
 
