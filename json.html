@@ -43,7 +43,8 @@ var tree = d3.tree()
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
 d3.json("./flare.json", function(data) {
-  var root = tree(stratify(data));
+  var root = d3.hierarchy(treeData);
+  tree(root);
 
   var link = g.selectAll(".link")
     .data(root.descendants().slice(1))
