@@ -34,7 +34,7 @@
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height"),
-    g = svg.append("g").attr("transform", "translate(" +  40 + "," + (height / 2 + 90) + ")");
+    g = svg.append("g").attr("transform", "translate(" +  (width / 2 + 40) + "," + (height / 2 + 90) + ")");
 
 var tree = d3.tree()
     .size([360, 1200])
