@@ -42,7 +42,7 @@ var tree = d3.tree()
     .size([360, 500])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-d3.csv("./flare.csv", function(error, data) {
+d3.json("./2017-03-23-videos.json", function(data) {
   if (error) throw error;
 
   var root = tree(stratify(data));
