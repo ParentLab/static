@@ -21,7 +21,7 @@
   stroke-width: 1.5px;
 }
 </style>
-<svg width="3000" height="3000"></svg>
+<svg width="4000" height="4000"></svg>
 <script src="./d3.v4.min.js"></script>
 <script>
 var svg = d3.select("svg"),
@@ -29,7 +29,7 @@ var svg = d3.select("svg"),
     height = +svg.attr("height"),
     g = svg.append("g").attr("transform", "translate(" + (width / 2 + 40) + "," + (height / 2 + 90) + ")");
 var tree = d3.tree()
-    .size([360, 1200])
+    .size([360, 1800])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 d3.json("./videos_sub5.json", function(treeData) {
   var root = d3.hierarchy(treeData);
