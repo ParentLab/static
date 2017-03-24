@@ -42,7 +42,7 @@ var tree = d3.tree()
     .size([360, 500])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-d3.json("./flare.json", function(data) {
+d3.json("./flare.json", function(treeData) {
   var root = d3.hierarchy(treeData);
   tree(root);
 
